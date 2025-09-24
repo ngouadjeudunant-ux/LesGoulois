@@ -1,5 +1,7 @@
 package navire;
 
+/**
+J'ai beaucoup les potions magique **/
 public class Goulois {
 
 	private String nom;
