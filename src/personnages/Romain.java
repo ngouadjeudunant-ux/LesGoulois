@@ -1,12 +1,11 @@
-package navire;
+package personnages;
 
 public class Romain {
-	
+
 	private String nom;
 	private int force;
 
 	public Romain(String nom, int force) {
-		super();
 		this.nom = nom;
 		this.force = force;
 	}
@@ -16,8 +15,7 @@ public class Romain {
 	}
 
 	public void parler(String texte) {
-		System.err.println(prendreParole() + "\"" + texte + "\"");
-
+		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
 
 	private String prendreParole() {
