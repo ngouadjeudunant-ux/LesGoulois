@@ -6,9 +6,8 @@ public class Chaudron {
 
 	public void remplirChaudron(int quantite, int forcePotion) {
 
-		quantitePotion += quantite;
-		forcePotion += forcePotion;
-		System.out.println("J'ai concocté " + quantite + "doses de potion magique. Elle a une force de " + forcePotion);
+		this.quantitePotion = quantite;
+		this.forcePotion = forcePotion;
 	}
 
 	public boolean resterPotion() {

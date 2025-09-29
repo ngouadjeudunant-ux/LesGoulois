@@ -5,6 +5,13 @@ public class Druide {
 	private String nom;
 	private int force;
 	private Chaudron chaudron;
+	
+	public Druide(String nom, int force) {
+		this.nom = nom; 
+		this.force = force;
+		chaudron = new Chaudron(); 
+		
+	}
 
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
@@ -14,10 +21,9 @@ public class Druide {
 		return "Le druide " + nom + ": ";
 	}
 
-	public void fabriquerPotion(int quantite, int forcePotion) {
-
+	public void fabriquerPotion(int quantite, int forcePotion) { 
 		chaudron.remplirChaudron(quantite, forcePotion);
-		System.out.println("J'ai concocté" + quantite + "doses de potion magique. Elle a une force de " + forcePotion);
+		System.out.println("J'ai concocté " + quantite + " doses de potion magique. Elle a une force de " + forcePotion);
 
 	}
 
@@ -27,12 +33,12 @@ public class Druide {
 		
 		if(cotientPotion) {
 			if(nomGaulois.equals("Obélix")){
-				parler("Non, " + nomGaulois + "Non!..Et tu le sais très bien!"); 
+				parler("Non, " + nomGaulois + " Non!..Et tu le sais très bien!"); 
 				 
 			}else {
 				int forcePotion = chaudron.prendreLouche(); 
 				gaulois.boirePotion(forcePotion);
-				parler("Tiens" + nomGaulois + "un peu de potion magique.");
+				parler("Tiens " + nomGaulois + " un peu de potion magique.");
 				
 			}
 		}else {
